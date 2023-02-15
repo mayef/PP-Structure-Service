@@ -51,7 +51,7 @@ def pdf_to_excel(pdf_bytes, remove_spaces=False):
         result = []
         # remove comments and change the path to your paddleocr path if you want to use virtual environment
         # os.chdir("C:/Users/zzz/anaconda3/envs/paddle_env/Scripts")
-        subprocess.call('paddleocr --image_dir=' + tmp_dir + ' --type=structure --layout=false --output=' + tmp_dir, shell=True)
+        subprocess.call('paddleocr --image_dir=' + tmp_dir + ' --type=structure --det_model_dir=C:/Users/zzz/Documents/sync-code/PP-Structure-Service/model/ch_ppocr_server_v2.0_det_infer --output=' + tmp_dir, shell=True)
         paths = os.listdir(tmp_dir)
         paths.sort(key=lambda x:int(x.split('.')[0]))
         for dir in paths:
@@ -75,7 +75,7 @@ def img_to_excel(img_bytes, remove_spaces=False):
         result = []
         # remove comments and change the path to your paddleocr path if you want to use virtual environment
         # os.chdir("C:/Users/zzz/anaconda3/envs/paddle_env/Scripts")
-        subprocess.call('paddleocr --image_dir=' + tmp_dir + '/0.jpg' + ' --type=structure --layout=false --output=' + tmp_dir, shell=True)
+        subprocess.call('paddleocr --image_dir=' + tmp_dir + '/0.jpg' + ' --type=structure --output=' + tmp_dir, shell=True)
         for file in os.listdir(os.path.join(tmp_dir, '0')):
             if file.endswith('.xlsx'):
                 with open(os.path.join(tmp_dir, '0', file), 'rb') as f:
