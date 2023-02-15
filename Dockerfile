@@ -12,6 +12,9 @@ RUN pip install -r /requirements.txt -i https://mirror.baidu.com/pypi/simple
 COPY . /app
 WORKDIR /app
 
+# mkdir tmp in /app
+RUN mkdir tmp
+
 # run
 CMD ["python", "api.py"]
 
