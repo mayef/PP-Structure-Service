@@ -128,5 +128,14 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# fonts
-fonts/
+# font
+font/
+
+# model
+model/
+
+tmp/
+
+output/
+
+img/

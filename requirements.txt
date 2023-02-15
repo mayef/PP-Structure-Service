@@ -1,0 +1,8 @@
+pymupdf==1.19.6
+numpy==1.21.6
+lxml==4.9.2
+openpyxl==3.1.0
+paddleocr==2.6.1.2
+pandas==1.3.5
+premailer==3.10.0
+sanic==22.12.0
